@@ -20,21 +20,28 @@ function mouseOver (color) {
 }
 const btnColor = document.querySelector('#color');
   btnColor.addEventListener('click', function(event){
-  let x = document.getElementById("colorpicker").value;
-  console.log(x);
-  mouseOver(x);
+  let color = document.getElementById("colorpicker").value;
+  mouseOver(color);
 });
-
-
-function RGB2Color(r,g,b)
-{
-  return 'rgb(' + Math.round(r) + ',' + Math.round(g) + ',' + Math.round(b) + ')';
-}
 
 const btn = document.querySelector('#eraser');
 btn.addEventListener('click', function(event){
   mouseOver("white"); 
 });
+
+const btnClear = document.querySelector('#clear');
+  btnClear.addEventListener('click', function(event){
+    let container = document.getElementById("container");
+    let rows = document.querySelectorAll(".row");
+    rows.forEach(row => container.removeChild(row));
+    let val = document.getElementById("grid").value;
+    createGrid(val);
+});
+
+const btnClear = document.querySelector('#rainbow');
+  btnRainbow.addEventListener('click', function(event){
+    mouseOver();
+  });
 
 
 

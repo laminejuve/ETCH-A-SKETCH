@@ -26,7 +26,8 @@
 	flex: 1;
 }
 label{
-    font-size: 30px;
+    font-size: 18px;
+    text-align: end;
 } 
 .btn{
     position: relative;
@@ -67,4 +68,9 @@ button:active
 {
    background-color: pink;
    color: red;
+}
+#grid{
+    align-self: center;
+    width: 150px;
+    margin-left: 100px;
 }
