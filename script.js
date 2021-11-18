@@ -37,11 +37,26 @@ const btnClear = document.querySelector('#clear');
     let val = document.getElementById("grid").value;
     createGrid(val);
 });
-
-const btnClear = document.querySelector('#rainbow');
+const btnRainbow = document.querySelector('#rainbow');
   btnRainbow.addEventListener('click', function(event){
-    mouseOver();
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach(cell => cell.addEventListener("mouseover", function (e){
+       let randomColor = Math.floor(Math.random()*16777215).toString(16);
+       e.target.style.backgroundColor = "#"+randomColor;
+    })) ;
   });
+
+  const btnDarker = document.querySelector('#darker');
+  btnDarker.addEventListener('click', function(event){
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach(cell => cell.addEventListener("mouseover", function (e){
+       let cellColor = cell.style.backgroundColor;
+       console.log(cellColor);
+       //e.target.style.backgroundColor = "#"+randomColor;
+    })) ;
+  });
+
+  
 
 
 
