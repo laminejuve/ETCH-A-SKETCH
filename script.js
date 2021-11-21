@@ -46,16 +46,7 @@ const btnRainbow = document.querySelector('#rainbow');
     })) ;
   });
 
-  const btnDarker = document.querySelector('#darker');
-  btnDarker.addEventListener('click', function(event){
-    let cells = document.querySelectorAll(".cell");
-    cells.forEach(cell => cell.addEventListener("mouseover", function (e){
-       let cellColor = cell.style.backgroundColor;
-       console.log(cellColor);
-       //e.target.style.backgroundColor = "#"+randomColor;
-    })) ;
-  });
-
+  
   
 
 
